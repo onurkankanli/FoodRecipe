@@ -1,0 +1,34 @@
+﻿<Window x:Class="FoodRecipe.WelcomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FoodRecipe"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Background="BlanchedAlmond"
+        mc:Ignorable="d"
+        Title="WelcomeWindow" Height="500" Width="850" MinHeight="500" MinWidth="850" ResizeMode="CanResizeWithGrip">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="20" Height="20*"/>
+            <RowDefinition MinHeight="20" Height="20*"/>
+            <RowDefinition MinHeight="20" Height="20*"/>
+            <RowDefinition MinHeight="10" Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="100" Width="100*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Images/WelcomeWindow.jpg"></ImageBrush>
+        </Grid.Background>
+        
+        <TextBlock Grid.Row="1" FontStyle="Oblique" TextAlignment="Center" FontWeight="ExtraBold" Foreground="Crimson" FontSize="40" Text="Welcome to Food Recipe"/>
+            <Button Grid.Row="2" IsDefault="True" x:Name="btnStart" 
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" 
+                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Click to start!" Click="btnStart_Click"/>
+        <TextBlock Grid.Row="3" FontStyle="Normal" TextAlignment="Center" FontSize="20" FontWeight="ExtraBold" Text="CLick the start button to start or press enter"/>
+
+    </Grid>
+</Window>
