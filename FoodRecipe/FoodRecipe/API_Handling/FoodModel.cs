@@ -21,7 +21,7 @@ namespace FoodRecipe.API_Handling
         public string[] strMeasure { get; set; }
         public string strSource { get; set; }
         public string strImageSource { get; set; }
-        public bool strCreativeCommonsConfirmed { get; set; }
+        public bool? strCreativeCommonsConfirmed { get; set; }
         public DateTime? dateModified { get; set; }
         
     }

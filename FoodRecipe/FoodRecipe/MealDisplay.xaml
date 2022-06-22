@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FoodRecipe"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Background="BlanchedAlmond"
         mc:Ignorable="d"
-        Title="MealDisplay" Height="450" Width="800">
+        Title="MealDisplay" Height="500" Width="850" MinHeight="500" MinWidth="850" ResizeMode="CanResizeWithGrip">
 
     <StackPanel Orientation="Vertical">
         <Grid>
@@ -50,12 +50,38 @@
                 <ColumnDefinition MinWidth="100" Width="100*"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal ID:">
-                
-            </TextBlock>
-            <TextBlock x:Name="meal_id" Grid.Row="0" Grid.Column="0" FontWeight="ExtraBlack" Text="{Binding MealID}">
-                
-            </TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal ID:"></TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Name:"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="ExtraBlack" Text="Side Drink:"></TextBlock>
+            <TextBlock Grid.Row="3" Grid.Column="0" FontWeight="ExtraBlack" Text="Category:"></TextBlock>
+            <TextBlock Grid.Row="4" Grid.Column="0" FontWeight="ExtraBlack" Text="Area:"></TextBlock>
+            <TextBlock Grid.Row="5" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Instructions:"></TextBlock>
+            <TextBlock Grid.Row="6" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Thumb:"></TextBlock>
+            <TextBlock Grid.Row="7" Grid.Column="0" FontWeight="ExtraBlack" Text="Tags:"></TextBlock>
+            <TextBlock Grid.Row="8" Grid.Column="0" FontWeight="ExtraBlack" Text="Youtube:"></TextBlock>
+            <TextBlock Grid.Row="9" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Ingredient:"></TextBlock>
+            <TextBlock Grid.Row="10" Grid.Column="0" FontWeight="ExtraBlack" Text="Measure:"></TextBlock>
+            <TextBlock Grid.Row="11" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Source:"></TextBlock>
+            <TextBlock Grid.Row="12" Grid.Column="0" FontWeight="ExtraBlack" Text="Image Source:"></TextBlock>
+            <TextBlock Grid.Row="13" Grid.Column="0" FontWeight="ExtraBlack" Text="CreativeCommonsConfirmed:"></TextBlock>
+            <TextBlock Grid.Row="14" Grid.Column="0" FontWeight="ExtraBlack" Text="Date Modified:"></TextBlock>
+            
+            <TextBlock x:Name="meal_id" Grid.Row="0" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="meal_name" Grid.Row="1" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="side_drink" Grid.Row="2" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="category" Grid.Row="3" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="area" Grid.Row="4" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="mealInstructions" Grid.Row="5" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="mealThumb" Grid.Row="6" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="Tags" Grid.Row="7" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="Youtube" Grid.Row="8" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="mealIngredient" Grid.Row="9" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="Measure" Grid.Row="10" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="mealsource" Grid.Row="11" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="Imagesource" Grid.Row="12" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="CreativeCommonsConfirmed" Grid.Row="13" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            <TextBlock x:Name="date_modified" Grid.Row="14" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
+            
         </Grid>
     </StackPanel>
 </Window>
