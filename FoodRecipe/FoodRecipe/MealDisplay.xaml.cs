@@ -40,7 +40,7 @@ namespace FoodRecipe
 
             ApiHelper.InitializeClient();
 
-            DisplayMeal("Croatian lamb peka");
+            DisplayMeal("Arrabiata");
         }
         public async void DisplayMeal(string foodname)
         {
@@ -61,37 +61,7 @@ namespace FoodRecipe
             //findict is a dictionary. A dictionary is a list of key-value pairs. 
             // we are looping through the elements to find the ingredients and 
             // measures. if they are not null, ,we are assigning them to memebers of a list<string>
-            string blah;
-            foreach(KeyValuePair<string, string> kvp in finDict)
-            {
-                if (kvp.Key.Contains("Ingredient"))
-                {
-                    if ((kvp.Value is null) && (kvp.Value.Length <= 1))
-                    {
-                         blah = "NA";
-                    }
-                    else
-                    {
-                        blah = kvp.Value;
-                    }
-                    IngredList.Add(blah);
-                }
-
-                if (kvp.Key.Contains("Measure"))
-                {
-                    if ((kvp.Value is null) && (kvp.Value.Length <= 1))
-                    {
-                        blah = "NA";
-
-                    }
-                    else
-                    {
-                        blah=kvp.Value;
-                    }
-                    MeasList.Add(blah);
-                }
-            }
-
+            
            foreach (KeyValuePair<string, string> kvp in finDict)
             {
                 if (kvp.Key.Contains("Ingredient"))
