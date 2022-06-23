@@ -6,10 +6,11 @@
         xmlns:local="clr-namespace:FoodRecipe"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Background="BlanchedAlmond"
         mc:Ignorable="d"
-        Title="MealDisplay" Height="500" Width="850" MinHeight="500" MinWidth="850" ResizeMode="CanResizeWithGrip">
+        Title="MealDisplay" Height="750" Width="900" MinHeight="750" MinWidth="900" ResizeMode="CanResizeWithGrip">
 
     <StackPanel Orientation="Vertical">
-        <Grid>
+
+        <Grid Margin="0 0 0 30">
             <Grid.RowDefinitions>
                 <RowDefinition MinHeight="20" Height="20*"/>
             </Grid.RowDefinitions>
@@ -23,65 +24,52 @@
             <Button Grid.Column="0" Grid.Row="0" IsDefault="True" x:Name="btnBack"
                         materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" Foreground="Black"
                         materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Back" Click="btnBack_Click"/>
-        </Grid>
 
+            <Button Grid.Column="3" Grid.Row="0" IsDefault="True" x:Name="btnQuit"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" Foreground="Black"
+                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Quit" Click="btnQuit_Click"/>
+
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <TextBlock x:Name="mealTitle"  TextAlignment="Center" FontWeight="Bold" FontSize="24"></TextBlock>
+                <TextBlock x:Name="mealID"  TextAlignment="Center" FontWeight="Bold" FontSize="18"></TextBlock>
+            </StackPanel>
+        </Grid>
+       
         <Grid>
+            
             <Grid.RowDefinitions>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="3*"/>
-                <RowDefinition Height="7*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
-                <RowDefinition MinHeight="20" Height="10*"/>
+                <RowDefinition MinHeight="20" Height="20*"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition MinWidth="25" Width="25*"/>
                 <ColumnDefinition MinWidth="100" Width="100*"/>
+                <ColumnDefinition MinWidth="100" Width="100*"/>
+                <ColumnDefinition MinWidth="100" Width="100*"/>
+            
             </Grid.ColumnDefinitions>
+            <Grid Grid.Column="2" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="20" Height="20*"/>
 
-            <TextBlock Grid.Row="0" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal ID:"></TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Name:"></TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="ExtraBlack" Text="Side Drink:"></TextBlock>
-            <TextBlock Grid.Row="3" Grid.Column="0" FontWeight="ExtraBlack" Text="Category:"></TextBlock>
-            <TextBlock Grid.Row="4" Grid.Column="0" FontWeight="ExtraBlack" Text="Area:"></TextBlock>
-            <TextBlock Grid.Row="5" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Instructions:"></TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Thumb:"></TextBlock>
-            <TextBlock Grid.Row="7" Grid.Column="0" FontWeight="ExtraBlack" Text="Tags:"></TextBlock>
-            <TextBlock Grid.Row="8" Grid.Column="0" FontWeight="ExtraBlack" Text="Youtube:"></TextBlock>
-            <TextBlock Grid.Row="9" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Ingredient:"></TextBlock>
-            <TextBlock Grid.Row="10" Grid.Column="0" FontWeight="ExtraBlack" Text="Measure:"></TextBlock>
-            <TextBlock Grid.Row="11" Grid.Column="0" FontWeight="ExtraBlack" Text="Meal Source:"></TextBlock>
-            <TextBlock Grid.Row="12" Grid.Column="0" FontWeight="ExtraBlack" Text="Image Source:"></TextBlock>
-            <TextBlock Grid.Row="13" Grid.Column="0" FontWeight="ExtraBlack" Text="CreativeCommonsConfirmed:"></TextBlock>
-            <TextBlock Grid.Row="14" Grid.Column="0" FontWeight="ExtraBlack" Text="Date Modified:"></TextBlock>
-            
-            <TextBlock x:Name="meal_id" Grid.Row="0" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="meal_name" Grid.Row="1" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="side_drink" Grid.Row="2" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="category" Grid.Row="3" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="area" Grid.Row="4" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="mealInstructions" Grid.Row="5" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="mealThumb" Grid.Row="6" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="Tags" Grid.Row="7" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="Youtube" Grid.Row="8" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="mealIngredient" Grid.Row="9" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="Measure" Grid.Row="10" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="mealsource" Grid.Row="11" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="Imagesource" Grid.Row="12" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="CreativeCommonsConfirmed" Grid.Row="13" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            <TextBlock x:Name="date_modified" Grid.Row="14" Grid.Column="1" FontWeight="ExtraBlack" Text="{Binding }"></TextBlock>
-            
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition MinWidth="100" Width="100*"/>
+
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Width="200" Height="200" x:Name="foodIMG"></Image>
+            </Grid>
+            <StackPanel Margin="10 10 10 10" Grid.Column="0" Grid.Row="0" x:Name="myStack" Background="BlanchedAlmond">
+                <TextBlock Margin="10 10 10 10" FontSize="25" Background="BlanchedAlmond" FontWeight="ExtraBlack" Text="General info"></TextBlock>
+            </StackPanel>
+
+            <DataGrid Grid.Row="0" Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"  Height="200" Width="200" HorizontalAlignment="Center"    
+                Name="InstrGrid" VerticalAlignment="Top" RowHeight="30" ColumnWidth="100" Background ="BlanchedAlmond" GridLinesVisibility="None" >
+            </DataGrid>
         </Grid>
+        <StackPanel Margin="10 10 10 10">
+            <TextBlock Margin="10 10 10 10" Background="BlanchedAlmond" FontWeight="ExtraBlack" Text="Recipe: " FontSize="25"></TextBlock>
+        <TextBlock HorizontalAlignment="Center" Background="BlanchedAlmond"   x:Name="Instr"></TextBlock>
+        </StackPanel>
     </StackPanel>
+    
 </Window>

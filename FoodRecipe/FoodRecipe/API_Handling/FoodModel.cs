@@ -8,6 +8,7 @@ namespace FoodRecipe.API_Handling
 {
     public class FoodModel
     {
+        public Dictionary<string, string> myDictionary { get; set;}
         public int idMeal { get; set; }
         public string strMeal { get; set; }
         public string strDrinkAlternate { get; set; } // TODO: what to do when null

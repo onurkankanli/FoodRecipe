@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\onurk\Desktop\FoodRecipe\FoodRecipe\obj\Debug\
+C:\Users\onurk\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\
 FoodRecipe
 none
 false
 DEBUG;TRACE
-C:\Users\onurk\Desktop\FoodRecipe\FoodRecipe\App.xaml
+C:\Users\onurk\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\App.xaml
 32108849712
 
 11720849090
-19-502833286
+19-1595405296
 MainWindow.xaml;MealDisplay.xaml;WelcomeWindow.xaml;
 
 True

@@ -8,7 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="850" MinHeight="500" MinWidth="850" ResizeMode="CanResizeWithGrip">
     <Grid>
-
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="20" Height="20*"/>
             <RowDefinition MinHeight="20" Height="20*"/>
@@ -33,6 +32,10 @@
         <Button Grid.Row="0" Grid.Column="0" IsDefault="True" x:Name="btnBack"
                         materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" 
                         materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Back" Click="btnBack_Click"/>
+
+        <Button Grid.Column="3" Grid.Row="0" IsDefault="True" x:Name="btnQuit"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" Foreground="Black"
+                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Quit" Click="btnQuit_Click"/>
 
     </Grid>
 </Window>

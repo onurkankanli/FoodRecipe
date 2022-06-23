@@ -43,5 +43,11 @@ namespace FoodRecipe
 
             this.Close();
         }
+
+        private void btnQuit_Click(object sender, RoutedEventArgs e)
+        {
+            //application shuts down when the button is pressed
+            Application.Current.Shutdown();
+        }
     }
 }
