@@ -30,7 +30,7 @@
                         materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Quit" Click="btnQuit_Click"/>
 
             <StackPanel Grid.Column="1" Grid.Row="0">
-                <TextBlock x:Name="mealTitle"  TextAlignment="Center" FontWeight="Bold" FontSize="24"></TextBlock>
+                <TextBlock x:Name="mealTitle" TextWrapping="Wrap" Text="{Binding }" TextAlignment="Center" FontWeight="Bold" FontSize="24"></TextBlock>
                 <TextBlock x:Name="mealID"  TextAlignment="Center" FontWeight="Bold" FontSize="18"></TextBlock>
             </StackPanel>
         </Grid>

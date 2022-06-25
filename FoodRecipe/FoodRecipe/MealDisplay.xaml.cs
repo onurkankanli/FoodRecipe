@@ -34,13 +34,13 @@ namespace FoodRecipe
 
         public List<Dictionary<string, string>> MealList = new List<Dictionary<string, string>>();
 
-        public MealDisplay()
+        public MealDisplay(string fname)
         {
             InitializeComponent();
 
             ApiHelper.InitializeClient();
 
-            DisplayMeal("Arrabiata");
+            DisplayMeal(fname);
         }
         public async void DisplayMeal(string foodname)
         {
@@ -54,13 +54,14 @@ namespace FoodRecipe
             List<String>  IngredList= new List<string>();
             List<String> MeasList = new List<string>();
 
-            mealTitle.TextWrapping = TextWrapping.Wrap;
+          //  mealTitle.TextWrapping = TextWrapping.Wrap;
             mealTitle.Text = finDict["strMeal"];
             mealID.Text = "Meal ID: "+finDict["idMeal"];
 
             //findict is a dictionary. A dictionary is a list of key-value pairs. 
             // we are looping through the elements to find the ingredients and 
             // measures. if they are not null, ,we are assigning them to memebers of a list<string>
+          
             
            foreach (KeyValuePair<string, string> kvp in finDict)
             {
