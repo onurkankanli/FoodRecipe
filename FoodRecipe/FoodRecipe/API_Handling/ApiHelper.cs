@@ -13,9 +13,11 @@ namespace FoodRecipe
         public static HttpClient ApiClient { get; set; }
         public static void InitializeClient()
         {
+            //initialize new instance of http client
             ApiClient = new HttpClient();
-            
+            //clears the request headers
             ApiClient.DefaultRequestHeaders.Accept.Clear();
+            //it initializes the request headers for json
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
     }

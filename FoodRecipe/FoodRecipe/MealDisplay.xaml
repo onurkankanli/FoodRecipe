@@ -34,9 +34,9 @@
                 <TextBlock x:Name="mealID"  TextAlignment="Center" FontWeight="Bold" FontSize="18"></TextBlock>
             </StackPanel>
         </Grid>
-       
+
         <Grid>
-            
+
             <Grid.RowDefinitions>
                 <RowDefinition MinHeight="20" Height="20*"/>
             </Grid.RowDefinitions>
@@ -45,31 +45,23 @@
                 <ColumnDefinition MinWidth="100" Width="100*"/>
                 <ColumnDefinition MinWidth="100" Width="100*"/>
                 <ColumnDefinition MinWidth="100" Width="100*"/>
-            
             </Grid.ColumnDefinitions>
-            <Grid Grid.Column="2" Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition MinHeight="20" Height="20*"/>
 
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition MinWidth="100" Width="100*"/>
+            <Image Grid.Column="2" Grid.Row="0" Width="200" Height="200" x:Name="foodIMG"></Image>
 
-                </Grid.ColumnDefinitions>
-                <Image Grid.Column="0" Grid.Row="0" Width="200" Height="200" x:Name="foodIMG"></Image>
-            </Grid>
             <StackPanel Margin="10 10 10 10" Grid.Column="0" Grid.Row="0" x:Name="myStack" Background="BlanchedAlmond">
                 <TextBlock Margin="10 10 10 10" FontSize="25" Background="BlanchedAlmond" FontWeight="ExtraBlack" Text="General info"></TextBlock>
             </StackPanel>
 
             <DataGrid Grid.Row="0" Grid.Column="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"  Height="200" Width="200" HorizontalAlignment="Center"    
-                Name="InstrGrid" VerticalAlignment="Top" RowHeight="30" ColumnWidth="100" Background ="BlanchedAlmond" GridLinesVisibility="None" >
+                Name="InstrGrid" VerticalAlignment="Top" RowHeight="30" ColumnWidth="100" Background ="BlanchedAlmond" GridLinesVisibility="None">
             </DataGrid>
         </Grid>
+
         <StackPanel Margin="10 10 10 10">
             <TextBlock Margin="10 10 10 10" Background="BlanchedAlmond" FontWeight="ExtraBlack" Text="Recipe: " FontSize="25"></TextBlock>
-        <TextBlock HorizontalAlignment="Center" Background="BlanchedAlmond"   x:Name="Instr"></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Background="BlanchedAlmond"   x:Name="Instr"></TextBlock>
         </StackPanel>
+
     </StackPanel>
-    
 </Window>

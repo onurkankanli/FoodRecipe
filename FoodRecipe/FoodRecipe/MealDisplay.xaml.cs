@@ -18,129 +18,168 @@ using MaterialDesignThemes;
 
 namespace FoodRecipe
 {
-    /// <summary>
-    /// Interaction logic for MealDisplay.xaml
-    /// </summary>
-    /// 
+    //this class is used to bind and display ingredient's and measure's datagrid
     public class OurIngredients
     {
+        //fields of datagrid
         public string Ingredients { get; set; }
         public string Measures { get; set; }
-        
     }
+
     public partial class MealDisplay : Window
     {
-        SearchProcessor searchme = new SearchProcessor();
-
+        //MealList is a list of dictionaries which stores the choosen food's information
         public List<Dictionary<string, string>> MealList = new List<Dictionary<string, string>>();
 
         public MealDisplay(string fname)
         {
             InitializeComponent();
-
+            //initializes our http client
             ApiHelper.InitializeClient();
 
             DisplayMeal(fname);
         }
+
+        //get the information of a meal by meal name and display it's details on the screen
         public async void DisplayMeal(string foodname)
         {
+            //creating a task with a type of List of dictionary and waiting for the data from DisplayMealTask with passing in the foodname
             Task<List<Dictionary<string, string>>> MealTask = DisplayMealTask(foodname);
+            //waiting and stroring the food data in MealList
             MealList = await MealTask;
 
+            //declaring a new dictionary to store meal details
             Dictionary<string, string> finDict = new Dictionary<string, string>();
-            // Meal list currently have only 1 element because we have searched for only one meal
+
+            //Meal list currently have only 1 element because we have searched for only one meal, so we are setting the finDict with the choosen food details
             finDict = MealList[0];
 
-            List<String>  IngredList= new List<string>();
+            //setting the text fields of the text blocks for title and id
+            mealTitle.TextWrapping = TextWrapping.Wrap;
+            mealTitle.Text = finDict["strMeal"];
+            mealID.Text = "Meal ID: " + finDict["idMeal"];
+
+            //we need list of strings for ingredients and measures to be displayed on datagrid
+            List<String> IngredList = new List<string>();
             List<String> MeasList = new List<string>();
 
-          //  mealTitle.TextWrapping = TextWrapping.Wrap;
-            mealTitle.Text = finDict["strMeal"];
-            mealID.Text = "Meal ID: "+finDict["idMeal"];
-
             //findict is a dictionary. A dictionary is a list of key-value pairs. 
-            // we are looping through the elements to find the ingredients and 
-            // measures. if they are not null, ,we are assigning them to memebers of a list<string>
-          
-            
-           foreach (KeyValuePair<string, string> kvp in finDict)
+            //we are looping through the elements to find the ingredients and measures.
+            //if they are not null, we are assigning them to members of a list<string>
+            foreach (KeyValuePair<string, string> kvp in finDict)
             {
+                //if any of the key's contains ingredient
                 if (kvp.Key.Contains("Ingredient"))
                 {
-                    if(!(kvp.Value is null) && !(kvp.Value.Length ==0))
+                    //and if the value is not null or empty
+                    if(!(kvp.Value is null) && !(kvp.Value.Length == 0))
                     {
-                        
+                        //add the values to IngredList
                         IngredList.Add(kvp.Value);
                     }
                 }
-                if(kvp.Key.Contains("Measure"))
+                //if any of the key's contains measure
+                if (kvp.Key.Contains("Measure"))
                 {
+                    //and if the value is not null or empty
                     if (!(kvp.Value is null) && !(kvp.Value.Length ==0))
                     {
+                        //add the values to MeasList
                         MeasList.Add(kvp.Value);
                     }
                 }
             }
 
+            //in1 is a list of objects to be displayed in datagtrid
             List<OurIngredients> in1 = new List<OurIngredients>();
             
+            //assigning values to the list of objects to be displayed on datagrid 
             for(int i = 0; i < IngredList.Count; i++)
             {
+                //creating a object of OurIngredients to be added to the list
                 OurIngredients in2 = new OurIngredients();
-
+                //adding the ingredients and measures to our object
                 in2.Ingredients = IngredList[i];
                 in2.Measures = MeasList[i];
+                //adding our object into the list
                 in1.Add(in2);
             }
-          
-            if (!(finDict["strDrinkAlternate"] is null) && !(finDict["strDrinkAlternate"].Length ==0))
+            //send our list to be displayed on datagrid
+            InstrGrid.ItemsSource = in1;
+
+            //the left side of the page is assigned to a vertical stack whose children are handled below
+            //checking if values of various keys and displaying them if they are not null or empty
+            if (!(finDict["strDrinkAlternate"] is null) && !(finDict["strDrinkAlternate"].Length == 0))
             {
-                TextBox drinkAlt = new TextBox();
+                //creating a new TextBlock for displaying the value and setting some properties
+                TextBlock drinkAlt = new TextBlock();
                 drinkAlt.FontSize = 14;                
                 drinkAlt.Background= Brushes.BlanchedAlmond;
                 drinkAlt.Text = "Good with : "+ finDict["strDrinkAlternate"];
+
+                //adding textblock to the stack,
                 myStack.Children.Add(drinkAlt);
             }
+            //checking if values of various keys and displaying them if they are not null or empty
             if (!(finDict["strCategory"] is null) && !(finDict["strCategory"].Length ==0))
             {
-                TextBox drinkAlt = new TextBox();
+                //creating a new TextBlock for displaying the value and setting some properties
+                TextBlock drinkAlt = new TextBlock();
                 drinkAlt.FontSize = 14;
                 drinkAlt.Background = Brushes.BlanchedAlmond;
                 drinkAlt.Text = "Category : " + finDict["strCategory"];
+
+                //adding textblock to the stack
                 myStack.Children.Add(drinkAlt);
             }
+            //checking if values of various keys and displaying them if they are not null or empty
             if (!(finDict["strArea"] is null) && !(finDict["strArea"].Length ==0))
             {
-                TextBox drinkAlt = new TextBox();
+                //creating a new TextBlock for displaying the value and setting some properties
+                TextBlock drinkAlt = new TextBlock();
                 drinkAlt.FontSize = 14;
                 drinkAlt.Background = Brushes.BlanchedAlmond;
                 drinkAlt.Text = "Area : " + finDict["strArea"];
+
+                //adding textblock to the stack
                 myStack.Children.Add(drinkAlt);
             }
+            //checking if values of various keys and displaying them if they are not null or empty
             if (!(finDict["strTags"] is null) && !(finDict["strTags"].Length ==0))
             {
-                TextBox drinkAlt = new TextBox();
+                //creating a new TextBlock for displaying the value and setting some properties
+                TextBlock drinkAlt = new TextBlock();
                 drinkAlt.FontSize = 14;
                 drinkAlt.Background = Brushes.BlanchedAlmond;
                 drinkAlt.Text = "Key words : " + finDict["strTags"];
                 drinkAlt.TextWrapping = TextWrapping.Wrap;
+
+                //adding textblock to the stack
                 myStack.Children.Add(drinkAlt);
             }
 
+            //creating a new instance of a bitmapimage
             BitmapImage bi3 = new BitmapImage();
+            //initializing the image
             bi3.BeginInit();
+            //source of the image
             bi3.UriSource = new Uri(finDict["strMealThumb"], UriKind.Absolute);
             bi3.EndInit();
+
+            //setting properties of the image
             foodIMG.Source = bi3;
             foodIMG.Height = 200;
             foodIMG.Width = 200;
+
+            //setting fontsize for the recipe instructions area at the bottom of the page
             Instr.FontSize = 14;
+
             // textwrapping. wrap prevents overflow by wrapping the text within bounds
             Instr.TextWrapping= TextWrapping.Wrap;
             Instr.Text = finDict["strInstructions"];
-            InstrGrid.ItemsSource = in1;
-          
         }
+
+        //its a task that gets the information of a meal by food name
         private async Task<List<Dictionary<string, string>>> DisplayMealTask(string foodname)
         {
             //creating a list of dates with a type of datamodel which is going to call LoadDate function from DateProcessor with the logged in user_id and selected date

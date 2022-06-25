@@ -7,27 +7,25 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" Background="BlanchedAlmond"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="850" MinHeight="500" MinWidth="850" ResizeMode="CanResizeWithGrip">
+    
     <StackPanel Orientation="Vertical">
-    <Grid>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="/Images/MainWindow.jpg"></ImageBrush>
+        </StackPanel.Background>
+        
+        <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition MinHeight="20" Height="20*"/>
-            <RowDefinition MinHeight="20" Height="20*"/>
-        </Grid.RowDefinitions>
+                <RowDefinition MinHeight="20" Height="20*"/>
+            </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="100" Width="100*"/>
-            <ColumnDefinition MinWidth="100" Width="100*"/>
+            <ColumnDefinition MinWidth="160" Width="160*"/>
             <ColumnDefinition MinWidth="100" Width="100*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid.Background>
-            <ImageBrush ImageSource="/Images/MainWindow.jpg"></ImageBrush>
-        </Grid.Background>
-
-        <Button Grid.Row="0" Grid.Column="1" IsDefault="True" x:Name="btnSearch" 
-                        materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" 
-                        materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Search..." Click="btnSearch_Click"/>
-
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="15" HorizontalAlignment="Center" FontWeight="ExtraBlack" Text="You can select your meal from the search bar"></TextBlock>
+        
         <Button Grid.Row="0" Grid.Column="0" IsDefault="True" x:Name="btnBack"
                         materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" 
                         materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Back" Click="btnBack_Click"/>
@@ -36,26 +34,26 @@
                         materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" Foreground="Black"
                         materialDesign:ButtonAssist.CornerRadius="10" FontSize="15" Content="Quit" Click="btnQuit_Click"/>
         </Grid>
-        <StackPanel Orientation="Horizontal" MaxHeight="350">
-        <ComboBox  x:Name="comboBox" HorizontalAlignment="Left" SelectedValuePath="Content" SelectedValue="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Text}" VerticalAlignment="Top" Width="120" Margin="100,50,150,50"  IsEditable="True" KeyUp="comboBox_KeyUp" IsTextSearchEnabled="False" SelectionChanged="comboBox_SelectionChanged">
-           
-        </ComboBox>
+        
+        <StackPanel Orientation="Vertical" Height="400" MaxHeight="400">
+            <ComboBox  x:Name="comboBox" HorizontalAlignment="Center" Margin="0 15 0 75" VerticalAlignment="Top" Width="250"
+                       SelectedValuePath="Content" SelectedValue="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Text}" 
+                       IsEditable="True" KeyUp="comboBox_KeyUp" IsTextSearchCaseSensitive="False" IsTextSearchEnabled="False" SelectionChanged="comboBox_SelectionChanged">
+            </ComboBox>
 
-        <ListView    Margin="10" Width="350" x:Name="lvUsers" SelectionChanged="SelectedMeal">
+        <ListView Margin="10" Height="270" Width="350" x:Name="FoodList" SelectionChanged="SelectedMeal">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn x:Name="imgMeal1" Header="Image" Width="120"  >
+                    <GridViewColumn Header="Image" Width="120"  >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Image x:Name="imgMeal1"  Source="{Binding ImgSrc}"  />
+                                <Image Source="{Binding ImgSrc}"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                    <GridViewColumn x:Name="mealId1"  Header="ID" Width="50" DisplayMemberBinding="{Binding MealId}" />
-                    <GridViewColumn x:Name="mealName1" Header="Name" Width="150" DisplayMemberBinding="{Binding MealName}"/>
-                 
-
-                </GridView>
+                    <GridViewColumn Header="ID" Width="50" DisplayMemberBinding="{Binding MealId}" />
+                        <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding MealName}"/>
+                    </GridView>
             </ListView.View>
         </ListView>
         </StackPanel>

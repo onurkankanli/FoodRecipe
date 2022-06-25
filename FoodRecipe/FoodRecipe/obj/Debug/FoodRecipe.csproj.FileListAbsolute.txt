@@ -96,7 +96,6 @@ G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (1)\FoodRecipe\FoodRecipe\FoodRec
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (1)\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CopyComplete
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (1)\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.exe
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (1)\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.pdb
-C:\Users\onurk\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.AssemblyReference.cache
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe.config
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.pdb

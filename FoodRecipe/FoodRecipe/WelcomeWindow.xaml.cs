@@ -31,10 +31,5 @@ namespace FoodRecipe
 
             this.Close();
         }
-
-        private void TextBlock_ColorChanged(object sender, RoutedPropertyChangedEventArgs<Color> e)
-        {
-
-        }
     }
 }

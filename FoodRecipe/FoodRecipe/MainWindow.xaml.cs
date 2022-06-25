@@ -16,21 +16,20 @@ using FoodRecipe.API_Handling;
 
 namespace FoodRecipe
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    /// 
+    
     public class TableInfo
     {
+        //list of dictinoaries for storing all categories, areas, ingredients when the page starts
         public List<Dictionary<string, string>> allCategories = new List<Dictionary<string, string>>();
         public List<Dictionary<string,string>> allAreas = new List<Dictionary<string,string>>();
         public List<Dictionary<string, string>> allIng = new List<Dictionary<string, string>>();
     }
-    public class FoodModel1 {
+    public class FoodModel1
+    {
+        //fields of the live table
         public string MealName { get; set; }
         public string MealId { get; set; }
         public string ImgSrc { get; set; }
-
     }
     public partial class MainWindow : Window
     {
@@ -39,166 +38,211 @@ namespace FoodRecipe
         public MainWindow()
         {
             InitializeComponent();
+            //initializes our http client
             ApiHelper.InitializeClient();
+
             LoadOnStart();
         }
+        //creating a new instance of TableInfo class
         public TableInfo tableInfo = new TableInfo();
-
 
         public async void LoadOnStart()
         {
-            List<Dictionary<string, string>> CatList = new List<Dictionary<string, string>>();
-
-            List<Dictionary<string, string>> AreaList = new List<Dictionary<string, string>>();
-            List<Dictionary<string, string>> IngList = new List<Dictionary<string, string>>();
-
-
+            //creating a task with a type: list of dictionaries
             Task<List<Dictionary<string, string>>> CatTask = LoadAllCategories();
             Task<List<Dictionary<string, string>>> AreaTask = LoadAllAreas();
             Task<List<Dictionary<string, string>>> IngTask = LoadAllIng();
-
+            
+            //waiting for the results and storing the task results in the list of dictionaries created in TableInfo class
             tableInfo.allCategories = await CatTask;
             tableInfo.allAreas = await AreaTask;
             tableInfo.allIng = await IngTask;
-
-
         }
      
         public void comboBox_KeyUp(object sender, KeyEventArgs e)
         {
             SearchProcessor myCatSearch = new SearchProcessor();
-            //  MealDisplay categoryDisplay = new MealDisplay();
-            comboBox.Items.Clear();
+
             var combobox = (ComboBox)sender;
+            //ctb is the input from user
             var ctb = combobox.Template.FindName("PART_EditableTextBox", combobox) as TextBox;
-            foreach (Dictionary<string, string> mitem in tableInfo.allCategories)
+
+            //if the items of combobox is empty add the contents to the combobox
+            if (combobox.Items.IsEmpty)
             {
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = mitem["strCategory"];
-                item.Tag = "category";
-                combobox.Items.Add(item);
-            }
-            foreach (Dictionary<string, string> mitem in tableInfo.allAreas)
-            {
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = mitem["strArea"];
-                item.Tag = "area";
-                combobox.Items.Add(item);
-            }
-            foreach (Dictionary<string, string> mitem in tableInfo.allIng)
-            {
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = mitem["strIngredient"];
-                item.Tag = "ingredient";
-                combobox.Items.Add(item);
+                //the items of the combobox dropdown are added, creating mitem with a type of dictionary
+                foreach (Dictionary<string, string> mitem in tableInfo.allCategories)
+                {
+                    //intializes new item in combobox
+                    ComboBoxItem item = new ComboBoxItem();
+                    //setting the content of the item with the current category
+                    item.Content = mitem["strCategory"];
+                    //we are labeling the dropdown item with a tag, so we know where to search from when it is selected
+                    item.Tag = "category";
+                    //adding the item to the Items of combobox
+                    combobox.Items.Add(item);
+                }
+                foreach (Dictionary<string, string> mitem in tableInfo.allAreas)
+                {
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = mitem["strArea"];
+                    item.Tag = "area";
+                    combobox.Items.Add(item);
+                }
+                foreach (Dictionary<string, string> mitem in tableInfo.allIng)
+                {
+                    ComboBoxItem item = new ComboBoxItem();
+                    item.Content = mitem["strIngredient"];
+                    item.Tag = "ingredient";
+                    combobox.Items.Add(item);
+                }
             }
 
+            //if there is no input go outside the function and wait for input
             if (ctb == null) return;
+
             if (Keyboard.Modifiers.HasFlag(ModifierKeys.Shift) || Keyboard.Modifiers.HasFlag(ModifierKeys.Control) || Keyboard.Modifiers.HasFlag(ModifierKeys.Alt))
                 return;
+
             var caretPos = ctb.CaretIndex;
             combobox.IsDropDownOpen = true;
-            //tableInfo.allCategories;
-            //combobox.Items.Add();
-
+            
+            //adding all the current items we have in combobox into itemsViewOriginal
             CollectionView itemsViewOriginal = (CollectionView)CollectionViewSource.GetDefaultView(combobox.Items);
+            //creating o object for loop through items
             itemsViewOriginal.Filter = ((o) =>
             {
+                //checks if there is no text input in combobox
                 if (String.IsNullOrEmpty(combobox.Text))
                 {
+                    //keep the items in the list
                     return true;
                 }
                 else
                 {
+                    //if combobox item contains the combobox.Text(user input string) keep it in the dropdown list 
                     if (((ComboBoxItem)o).Content.ToString().Contains(combobox.Text))
                     {
+                        //keep the items in the list
                         return true;
                     }
                     else
                     {
+                        //delete the items from the list
                         return false;
                     }
                 }
             });
 
+            //refresh the items in the list
             itemsViewOriginal.Refresh();
             ctb.CaretIndex = caretPos;
-           
-
         }
-        private void SelectedMeal(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+
+        //function executes when something is selected form list view
+        private void SelectedMeal(object sender, SelectionChangedEventArgs e)
         {
+            //takes the selected item's info from the even arguments and assigns it to instance of foodmodel1
             ListView lv = e.OriginalSource as ListView;
-            ListViewItem lvi = lv.SelectedItem as ListViewItem;
+            
+            //we are taking the SelectedItem as a instance of our class
             FoodModel1 ftoselect = lv.SelectedItem as FoodModel1;
-            //ftoselect = lv.SelectedItem;
-          
+            
+            //we are passing the MealName to our MealDisplay screen
             MealDisplay mealDisplay = new MealDisplay(ftoselect.MealName);
+
+            //we need Begin initialization to let the screen start
             mealDisplay.BeginInit();
             mealDisplay.Show();
            
             this.Close();
         }
+
         private async void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //if the selected is not null
             if (comboBox.SelectedItem != null)
             {
-                //ComboBoxItem cbi1 = (ComboBoxItem)(sender as ComboBox).SelectedItem;
+                //setting cbi as our selected item
                 ComboBoxItem cbi = (ComboBoxItem)comboBox.SelectedItem;
+
+                //storing the selected items name in string
                 string selectedText = cbi.Content.ToString();
-                List<Dictionary<string,string>> deneme= await SearchByTag(cbi);
+
+                //the list in contains the meal id, thumbnail picture, and a meal name
+                List<Dictionary<string,string>> deneme = await SearchByTag(cbi);
+                //passing the list deneme into DisplayInList function
                 DisplayInList(deneme);
             }
-            // I need to call something to update a table with the meal categories or areas or ingredients.
-
         }
-        public FoodModel1 listItemObjs = new FoodModel1();
-      public void DisplayInList(List<Dictionary<string, string>> deneme)
+
+        //function to display the meals to select from a list 
+        //everytime a selection is made, this function is called to update
+        public void DisplayInList(List<Dictionary<string, string>> deneme)
         {
+            //created a list of food model
             List<FoodModel1> items = new List<FoodModel1>();
-            //List<User> items = new List<User>();
+
+            //looping to add List dictionary deneme into item
             foreach (Dictionary<string, string> item in deneme)
             {
-                items.Add(new FoodModel1() { MealName = item["strMeal"], MealId = item["idMeal"], ImgSrc = item["strMealThumb"] });
-            }
-            lvUsers.ItemsSource = items;
+                //creating a new instance of foodmodel1 since the fields insıde this class are to be binded to xaml
+                FoodModel1 foodModel = new FoodModel1();
+                //setting the MealName, MealId, ImgSrc fields of the foodmodel instance to the correspondıng values in item (a dictionary)
+                foodModel.MealName = item["strMeal"];
+                foodModel.MealId = item["idMeal"];
+                foodModel.ImgSrc = item["strMealThumb"];
 
+                //adding all the the fields of our table into items list which is type of FoodModel
+                items.Add(foodModel);
+            }
+            //adding list of objects(MealName, Meal) to the list
+            FoodList.ItemsSource = items;
         }
+
         private async Task<List<Dictionary<string, string>>> SearchByTag(ComboBoxItem cbi)
         {
+            //if the selected content or tag is null or empty
             if ( (!string.IsNullOrEmpty(cbi.Content.ToString())) && (!string.IsNullOrEmpty(cbi.Tag.ToString()) ))
-                {
+            {
+                //if tag of our item is category
                 if (cbi.Tag.ToString() == "category")
                 {
-                    List<Dictionary<string, string>> sByCat = await SearchProcessor.LoadSearchByCategory(cbi);
+                    //takes the data with the choosen category
+                    List<Dictionary<string, string>> sByCat = await SearchProcessor.LoadSearchByCategory(cbi.Content.ToString());
+
                     return sByCat;
-                    // List<Dictionary<string, string>> ListByCat = await sByCat;
+                    
                 }else if (cbi.Tag.ToString() == "area")
                 {
-                    //List<Dictionary<string, string>> sByArea = await SearchProcessor.LoadSearchByArea(cbi.Content.ToString());
+                    //takes the data with the choosen area
                     var sByArea = await SearchProcessor.LoadSearchByArea(cbi.Content.ToString());
+
                     return sByArea;
-                    //  List<Dictionary<string, string>> ListByArea = await sByArea;
-                } else if (cbi.Tag.ToString() == "ingredient")
+                    
+                }else if (cbi.Tag.ToString() == "ingredient")
                 {
-                    List<Dictionary<string, string>> sByIng = await SearchProcessor.LoadSearchByIng(cbi);
+                    //takes the data with the given ingredient
+                    List<Dictionary<string, string>> sByIng = await SearchProcessor.LoadSearchByIng(cbi.Content.ToString());
+
                     return sByIng;
-                    //   List<Dictionary<string, string>> ListByIng = await sByIng;
                 }
+                //if none of the if conditions above are true, then send empty list
                 else
                 {
-                    List<Dictionary<string, string>> sByIng = await SearchProcessor.LoadSearchAllAreas();
+                    List<Dictionary<string, string>> sByIng = new List<Dictionary<string, string>>();
+
                     return sByIng;
                 }
             }
             else
             {
-                List<Dictionary<string, string>> sByIng = await SearchProcessor.LoadSearchAllAreas();
+                //if selected item is null or empty, send an empty list 
+                List<Dictionary<string, string>> sByIng = new List<Dictionary<string, string>>();
+ 
                 return sByIng;
             }
         }
-
-
 
         private async Task<List<Dictionary<string, string>>> LoadAllCategories()
         {
@@ -218,13 +262,6 @@ namespace FoodRecipe
         {
             List<Dictionary<string, string>> categories = await SearchProcessor.LoadSearchAllIngs();
             return categories;
-        }
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            MealDisplay showmefood = new MealDisplay("Arabiatta");
-            showmefood.Show();
-
-            this.Close();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
