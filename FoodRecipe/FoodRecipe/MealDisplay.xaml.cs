@@ -28,9 +28,6 @@ namespace FoodRecipe
 
     public partial class MealDisplay : Window
     {
-        //MealList is a list of dictionaries which stores the choosen food's information
-        public List<Dictionary<string, string>> MealList = new List<Dictionary<string, string>>();
-
         public MealDisplay(string fname)
         {
             InitializeComponent();
@@ -39,6 +36,9 @@ namespace FoodRecipe
 
             DisplayMeal(fname);
         }
+
+        //MealList is a list of dictionaries which stores the choosen food's information
+        public List<Dictionary<string, string>> MealList = new List<Dictionary<string, string>>();
 
         //get the information of a meal by meal name and display it's details on the screen
         public async void DisplayMeal(string foodname)
@@ -52,6 +52,7 @@ namespace FoodRecipe
             Dictionary<string, string> finDict = new Dictionary<string, string>();
 
             //Meal list currently have only 1 element because we have searched for only one meal, so we are setting the finDict with the choosen food details
+            //store first index since we have only 1 food selected
             finDict = MealList[0];
 
             //setting the text fields of the text blocks for title and id
@@ -115,7 +116,7 @@ namespace FoodRecipe
                 TextBlock drinkAlt = new TextBlock();
                 drinkAlt.FontSize = 14;                
                 drinkAlt.Background= Brushes.BlanchedAlmond;
-                drinkAlt.Text = "Good with : "+ finDict["strDrinkAlternate"];
+                drinkAlt.Text = "Good with : " + finDict["strDrinkAlternate"];
 
                 //adding textblock to the stack,
                 myStack.Children.Add(drinkAlt);
@@ -159,33 +160,34 @@ namespace FoodRecipe
             }
 
             //creating a new instance of a bitmapimage
-            BitmapImage bi3 = new BitmapImage();
+            BitmapImage FoodImage = new BitmapImage();
             //initializing the image
-            bi3.BeginInit();
+            FoodImage.BeginInit();
             //source of the image
-            bi3.UriSource = new Uri(finDict["strMealThumb"], UriKind.Absolute);
-            bi3.EndInit();
+            FoodImage.UriSource = new Uri(finDict["strMealThumb"], UriKind.Absolute);
+            FoodImage.EndInit();
 
-            //setting properties of the image
-            foodIMG.Source = bi3;
+            //setting properties of the image for the xaml
+            //foodIMG in xaml
+            foodIMG.Source = FoodImage;
             foodIMG.Height = 200;
             foodIMG.Width = 200;
 
             //setting fontsize for the recipe instructions area at the bottom of the page
-            Instr.FontSize = 14;
+            Recipe_Instructions.FontSize = 14;
 
             // textwrapping. wrap prevents overflow by wrapping the text within bounds
-            Instr.TextWrapping= TextWrapping.Wrap;
-            Instr.Text = finDict["strInstructions"];
+            Recipe_Instructions.TextWrapping= TextWrapping.Wrap;
+            Recipe_Instructions.Text = finDict["strInstructions"];
         }
 
         //its a task that gets the information of a meal by food name
         private async Task<List<Dictionary<string, string>>> DisplayMealTask(string foodname)
         {
-            //creating a list of dates with a type of datamodel which is going to call LoadDate function from DateProcessor with the logged in user_id and selected date
-            List<Dictionary<string, string>> dates = await SearchProcessor.LoadSearchByName(foodname);
+            //creating a list of dictionary called data whivh will get the food information with the taken food name
+            List<Dictionary<string, string>> getmefooooood = await SearchProcessor.LoadSearchByName(foodname);
 
-            return dates;
+            return getmefooooood;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

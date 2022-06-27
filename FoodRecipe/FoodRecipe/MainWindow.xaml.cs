@@ -34,7 +34,7 @@ namespace FoodRecipe
     public partial class MainWindow : Window
     {
         public SearchProcessor foodnamesearch = new SearchProcessor();
-        public string sResult;
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -61,6 +61,7 @@ namespace FoodRecipe
      
         public void comboBox_KeyUp(object sender, KeyEventArgs e)
         {
+            //initializing new instance of SearchProcessor class
             SearchProcessor myCatSearch = new SearchProcessor();
 
             var combobox = (ComboBox)sender;
@@ -120,7 +121,8 @@ namespace FoodRecipe
                 }
                 else
                 {
-                    //if combobox item contains the combobox.Text(user input string) keep it in the dropdown list 
+                    //if combobox item contains the combobox.Text(user input string) keep it in the dropdown list
+                    //if item in my combobox contains the user input string
                     if (((ComboBoxItem)o).Content.ToString().Contains(combobox.Text))
                     {
                         //keep the items in the list
@@ -152,7 +154,7 @@ namespace FoodRecipe
             MealDisplay mealDisplay = new MealDisplay(ftoselect.MealName);
 
             //we need Begin initialization to let the screen start
-            mealDisplay.BeginInit();
+            //mealDisplay.BeginInit();
             mealDisplay.Show();
            
             this.Close();
@@ -202,7 +204,7 @@ namespace FoodRecipe
 
         private async Task<List<Dictionary<string, string>>> SearchByTag(ComboBoxItem cbi)
         {
-            //if the selected content or tag is null or empty
+            //if the selected content or tag is NOT null or empty
             if ( (!string.IsNullOrEmpty(cbi.Content.ToString())) && (!string.IsNullOrEmpty(cbi.Tag.ToString()) ))
             {
                 //if tag of our item is category
@@ -230,6 +232,7 @@ namespace FoodRecipe
                 //if none of the if conditions above are true, then send empty list
                 else
                 {
+                    //send empty list
                     List<Dictionary<string, string>> sByIng = new List<Dictionary<string, string>>();
 
                     return sByIng;
@@ -246,22 +249,20 @@ namespace FoodRecipe
 
         private async Task<List<Dictionary<string, string>>> LoadAllCategories()
         {
-            //creating a list of dates with a type of datamodel which is going to call LoadDate function from DateProcessor with the logged in user_id and selected date
             List<Dictionary<string, string>> categories = await SearchProcessor.LoadSearchAllCategories();
 
             return categories;
         }
         private async Task<List<Dictionary<string, string>>> LoadAllAreas()
         {
-            //creating a list of dates with a type of datamodel which is going to call LoadDate function from DateProcessor with the logged in user_id and selected date
-            List<Dictionary<string, string>> categories = await SearchProcessor.LoadSearchAllAreas();
+            List<Dictionary<string, string>> areas = await SearchProcessor.LoadSearchAllAreas();
 
-            return categories;
+            return areas;
         }
         private async Task<List<Dictionary<string, string>>> LoadAllIng()
         {
-            List<Dictionary<string, string>> categories = await SearchProcessor.LoadSearchAllIngs();
-            return categories;
+            List<Dictionary<string, string>> ingredients = await SearchProcessor.LoadSearchAllIngs();
+            return ingredients;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)

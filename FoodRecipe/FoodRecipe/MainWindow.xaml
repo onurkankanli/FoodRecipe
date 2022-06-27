@@ -24,7 +24,7 @@
             <ColumnDefinition MinWidth="100" Width="100*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="15" HorizontalAlignment="Center" FontWeight="ExtraBlack" Text="You can select your meal from the search bar"></TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="1" FontSize="15" HorizontalAlignment="Center" Text="You can select your meal from the search bar" FontWeight="ExtraBlack"></TextBlock>
         
         <Button Grid.Row="0" Grid.Column="0" IsDefault="True" x:Name="btnBack"
                         materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="45" Width="120" 
