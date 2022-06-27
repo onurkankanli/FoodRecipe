@@ -14,9 +14,16 @@ using System.Windows.Shapes;
 
 namespace FoodRecipe
 {
-    /// <summary>
-    /// Interaction logic for WelcomeWindow.xaml
-    /// </summary>
+    /*
+    Name: Onurkan Kanli
+    Student Number: 492421
+
+    References:
+    https://www.codegrepper.com/code-examples/csharp/wpf+combobox+filter+as+you+type
+    https://stackoverflow.com/questions/10679214/how-do-you-set-the-content-type-header-for-an-httpclient-request
+    https://docs.microsoft.com/en-us/dotnet/desktop/wpf/controls/listview-overview?view=netframeworkdesktop-4.8
+    */
+
     public partial class WelcomeWindow : Window
     {
         public WelcomeWindow()
