@@ -80,6 +80,7 @@
     <Compile Include="MealDisplay.xaml.cs">
       <DependentUpon>MealDisplay.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NetworkConnectivity\NetCheck.cs" />
     <Compile Include="WelcomeWindow.xaml.cs">
       <DependentUpon>WelcomeWindow.xaml</DependentUpon>
     </Compile>

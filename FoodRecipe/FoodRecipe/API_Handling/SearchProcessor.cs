@@ -6,9 +6,11 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Net.NetworkInformation;
 
 namespace FoodRecipe.API_Handling
 {
+   
     public class SearchProcessor
     {
         //searches for a meal by name
@@ -18,7 +20,7 @@ namespace FoodRecipe.API_Handling
             string url = "";
 
             url = $"https://www.themealdb.com/api/json/v1/1/search.php?s={foodname}";
-
+           
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync(url))
             {
                 //if response was successful
@@ -44,6 +46,23 @@ namespace FoodRecipe.API_Handling
                     throw new Exception(response.ReasonPhrase);
                 }
             }
+        }
+        public static bool IsConnectedToInternet()
+        {
+            string host = "https://themealdb.com";
+            bool result = false;
+            Ping p = new Ping();
+            try
+            {
+                PingReply reply = p.Send(host, 3000);
+                if (reply.Status == IPStatus.Success)
+                    return true;
+            }
+            catch 
+            {
+
+            }
+            return result;
         }
 
         //load data by category
@@ -258,9 +277,6 @@ namespace FoodRecipe.API_Handling
             }
         }
     }
-
-
-
 }
 
 

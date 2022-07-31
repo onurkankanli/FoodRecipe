@@ -130,3 +130,107 @@ G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\obj\De
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CopyComplete
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.exe
 G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe (2)~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.pdb
+C:\Users\onurk\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.AssemblyReference.cache
+C:\Users\onurk\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.SuggestedBindingRedirects.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe.config
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.pdb
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.dll
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.pdb
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.pdb
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.xml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.xml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.xml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.xml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.AssemblyReference.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.SuggestedBindingRedirects.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.g.cs
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.g.cs
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.g.cs
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\App.g.cs
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.lref
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.baml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.baml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.baml
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.g.resources
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.Properties.Resources.resources
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.GenerateResource.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CoreCompileInputs.cache
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CopyComplete
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.exe
+G:\My Drive\DO_MY_HW\onurkan_kanlı\FoodRecipe_final~\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.pdb
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe.config
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.pdb
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.pdb
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.g.cs
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.g.cs
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.g.cs
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\App.g.cs
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.cache
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.lref
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.baml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.baml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.baml
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.g.resources
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.Properties.Resources.resources
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.GenerateResource.cache
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CopyComplete
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.exe
+C:\Users\User\Desktop\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.pdb
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe.config
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.exe
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\FoodRecipe.pdb
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignColors.pdb
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.g.cs
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.g.cs
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\App.g.cs
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.cache
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe_MarkupCompile.lref
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\MealDisplay.baml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\WelcomeWindow.baml
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.g.resources
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.Properties.Resources.resources
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.GenerateResource.cache
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.csproj.CopyComplete
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.exe
+C:\Users\User\source\repos\FoodRecipe\FoodRecipe\FoodRecipe\obj\Debug\FoodRecipe.pdb

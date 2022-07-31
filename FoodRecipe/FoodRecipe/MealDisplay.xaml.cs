@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using FoodRecipe.API_Handling;
 using MaterialDesignColors;
 using MaterialDesignThemes;
+using System.Net.NetworkInformation;
 
 namespace FoodRecipe
 {
@@ -33,7 +34,7 @@ namespace FoodRecipe
             InitializeComponent();
             //initializes our http client
             ApiHelper.InitializeClient();
-
+            
             DisplayMeal(fname);
         }
 
@@ -184,10 +185,11 @@ namespace FoodRecipe
         //its a task that gets the information of a meal by food name
         private async Task<List<Dictionary<string, string>>> DisplayMealTask(string foodname)
         {
+           
             //creating a list of dictionary called data whivh will get the food information with the taken food name
             List<Dictionary<string, string>> getmefooooood = await SearchProcessor.LoadSearchByName(foodname);
 
-            return getmefooooood;
+            return getmefooooood;          
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -196,7 +198,6 @@ namespace FoodRecipe
             main.Show();
 
             this.Close();
-
         }
 
         private void btnQuit_Click(object sender, RoutedEventArgs e)
