@@ -1,5 +1,5 @@
 # FoodRecipe
-C# WPF Application for food recipes with filtering the food for all Categories, Area, Ingredients
+C# .NET WPF Application for food recipes with filtering the food for all Categories, Area, Ingredients
 
 I am using the MealDB API for gathering the data into my project, Link of API: https://www.themealdb.com/api.php
 
